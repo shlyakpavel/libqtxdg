@@ -43,6 +43,7 @@ include(compiler_settings NO_POLICY_SCOPE)
 set(CMAKE_AUTOMOC ON)
 
 find_package(Qt5 ${QT_MINIMUM_VERSION} CONFIG REQUIRED Widgets Svg Xml DBus)
+find_package(GLIB REQUIRED COMPONENTS gobject gio gio-unix)
 
 if (BUILD_TESTS)
     find_package(Qt5 ${QT_MINIMUM_VERSION} CONFIG REQUIRED Test)
